@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; height: 100vh; align-items: center; background-color: antiquewhite;">
+        <div style="position: relative; height: 400px; width: 700px; background-color: aqua; border-radius: 4px; border: solid black 1px;">
+            <h1 style="text-align: center;">IPPB WELCOMES YOU</h1>
+            <h1 style="text-align: center;"><u>Login</u></h1>
+            <label style="position: absolute; top: 40%; left: 13%;">USERNAME OR MOBILE NUMBER</label>
+            <input type="text" name="username" class="myname" style="position: absolute; top: 40%; left: 50%;" id="username" onkeyup="key()"><br>
+            
+            <label style="position: absolute; top: 45%; left: 28%;">PASSWORD</label>
+            <p style="position: absolute; top: 80%;">[Note: username: Durgaprasad, Mobile no: 9391466250, password: 4321]</p>
+            <input type="password" name="number" id="pin" disabled style="position: absolute; top: 45%; left: 50%;"><br>
+            
+            <button onclick="sum()" style="cursor: pointer; position: absolute; top: 51%; left: 50%;">ENTER</button>
+        </div>
+    </div>
+
+    <script>
+        function key() {
+            const username = document.getElementById("username").value;
+            if (username === 'Durgaprasad' || username === '9391466250') {
+                document.getElementById("pin").disabled = false;
+            } else {
+                document.getElementById("pin").disabled = true;
+            }
+        }
+        function sum(){
+            const password  =parseInt(document.getElementById("pin").value);
+            if(password===4321){
+                location.href = 'Home.html';
+            }
+
+        }
+      
+    </script>
+</body>
+</html>

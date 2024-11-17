@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .div {
+            border: solid 1px black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="display: flex; justify-content: center; gap: 10px;">
+        <div class="div">
+            <h1>Account Details</h1>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button style="font-size: 20px;padding-left: 20px; padding-right: 20px;cursor: pointer;" id="Account">Enter</button>
+            </div>
+        </div>
+        <div class="div">
+            <h1>Credit Amount</h1>
+            <div style="display: flex; justify-content: center;">
+                <button style="font-size: 20px;padding-left: 20px; padding-right: 20px; cursor: pointer;" id="credit">Enter</button>
+            </div>
+        </div>
+        <div class="div">
+            <h1>Debit Amount</h1>
+            <div style="display: flex; justify-content: center;">
+                <button style="font-size: 20px;padding-left: 20px; padding-right: 20px;" id="debit">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;">IPPB! India's No.1 Bank</h1>
+    <h3><u>Terms and Conditions:</u></h3>
+    <p>1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia corporis, odio dignissimos blanditiis, tempore reiciendis sed veni.</p>
+    <p>2.consectetur adipisicing elit. Impedit officia corporis, odio dignissimos blanditiis, tempor.</p>
+    <p>3. sit amet consectetur adipisicing elit. Impedit officia corporis, odio dignissimos blanditiis, tempore reiciendis sed v.</p>
+    <p>4ipsum dolor sit amet consectetur adipisicing elit. Impedit officia corporis, odio dignissimos blanditiis, tempore reiciendi.</p>
+    <p>5. adipisicing elit. Impedit officia corporis, odio dignissimos blan.</p>
+    <p>6.Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia corporis, odio dignissimos blanditiis, tempore reici.</p>
+    <p>7. elit. Impedit officia corporis, odio dignissimos blanditiis, tempore reiciendis sed .</p>
+    <div  style="display: flex; justify-content: center; margin-top: 100px;">
+        <button style="font-size: 20px; padding-left: 30px; padding-right: 30px; padding-top: 10px;padding-bottom: 10px; cursor: pointer;" onclick="sum()">Log out</button>
+    </div>
+    <script>
+        document.getElementById("Account").addEventListener('click', () => {
+            location.href = 'Account.html';
+        });
+        document.getElementById("credit").addEventListener('click', () => {
+            location.href = 'Credit.html';
+        });
+        document.getElementById("debit").addEventListener('click', () => {
+            location.href = 'Debit.html';
+        });
+        function sum() {
+    // Show a confirmation dialog
+    var result = confirm('Do you want to logout?');
+    if(result) {
+       
+        location.href = "Login.html";
+    } else {
+        location.href = "Home.html";
+    }
+}
+
+    </script>
+</body>
+</html>
